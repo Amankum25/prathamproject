@@ -1,0 +1,30 @@
+name: Module check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: PHP syntax (every .php file)
+        run: |
+          php -v | head -1
+          find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Portal rules (module.json, database.sql, shared/ unchanged)
+        env:
+          RC_TEMPLATE: ${{ github.event.repository.is_template && '1' || '0' }}
+        run: php tools/check_module.php
+
+      - name: Database imports cleanly into MySQL
+        run: |
+          sudo systemctl start mysql
+          mysql -uroot -proot -e "CREATE DATABASE rc_campus CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+          mysql -uroot -proot rc_campus < shared/shared_schema.sql
+          mysql -uroot -proot rc_campus < database.sql
+          mysql -uroot -proot rc_campus -e "SHOW TABLES"

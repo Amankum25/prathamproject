@@ -1,0 +1,25 @@
+{
+  "id": "P27",
+  "title": "Bill Tracking System",
+  "student": {
+    "name": "Pratham",
+    "roll_no": "24020568036"
+  },
+  "table_prefix": "bill_",
+  "entry": "index.php",
+  "menu": [
+    {
+      "label": "Bills Ledger",
+      "href": "index.php"
+    },
+    {
+      "label": "Submit Bill",
+      "href": "add.php"
+    },
+    {
+      "label": "Track by Bill #",
+      "href": "track.php"
+    }
+  ],
+  "addon": null
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proposal · P20 · 24020568036 · Samarth Bill Tracking</title>
+    <style>
+        @page { size: A4; margin: 15mm; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.45; color: #1f2937; margin: 0; padding: 15px; }
+        .header { text-align: center; border-bottom: 2px solid #781d26; padding-bottom: 8px; margin-bottom: 14px; }
+        .college { font-size: 17px; font-weight: 700; color: #781d26; }
+        .sub { font-size: 12px; color: #4b5563; font-weight: 500; }
+        .title-box { background: #fdf2f4; border: 1px solid #fecdd3; border-radius: 6px; padding: 10px 14px; margin-bottom: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12.5px; }
+        h3 { font-size: 13.5px; color: #781d26; margin: 10px 0 4px 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+        p { margin: 4px 0; }
+        ul { margin: 4px 0 6px 18px; padding: 0; }
+        li { margin-bottom: 2px; }
+        table { width: 100%; border-collapse: collapse; margin: 6px 0; font-size: 12px; }
+        th, td { border: 1px solid #cbd5e1; padding: 5px 8px; text-align: left; }
+        th { background: #f8fafc; font-weight: 600; color: #334155; }
+        code { font-family: ui-monospace, Consolas, monospace; background: #f1f5f9; padding: 1px 4px; border-radius: 3px; font-size: 11.5px; }
+        .workflow { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 4px; padding: 8px; text-align: center; font-family: monospace; font-size: 11.5px; margin: 6px 0; }
+        .signatures { margin-top: 24px; display: flex; justify-content: space-between; padding-top: 18px; border-top: 1px solid #94a3b8; font-size: 12px; }
+        .print-btn { background: #781d26; color: #fff; border: none; padding: 8px 14px; border-radius: 4px; cursor: pointer; font-weight: 600; position: fixed; top: 15px; right: 15px; }
+        @media print { .print-btn { display: none; } body { padding: 0; } }
+    </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print 1-Page Proposal</button>
+
+<div class="header">
+    <div class="college">RAMANUJAN COLLEGE · UNIVERSITY OF DELHI</div>
+    <div class="sub">Department of Computer Science · GE-5b Advanced Web Programming · Semester V (2026-27)</div>
+    <div style="font-weight: 700; font-size: 14px; margin-top: 4px; color: #1f2937;">ONE-PAGE PROJECT PROPOSAL (MILESTONE 1)</div>
+</div>
+
+<div class="title-box">
+    <div>
+        <div><strong>Project ID:</strong> P20</div>
+        <div><strong>Module Title:</strong> Samarth: Bill Tracking System</div>
+        <div><strong>Package:</strong> Finance (RC Campus Connect ERP)</div>
+    </div>
+    <div>
+        <div><strong>Student Name:</strong> Aman</div>
+        <div><strong>University Roll No:</strong> 24020568036</div>
+        <div><strong>Assigned Table Prefix:</strong> <code>bill_</code></div>
+    </div>
+</div>
+
+<h3>1. Problem Statement & Scope</h3>
+<p>
+    College departments regularly receive bills and invoices for hardware, stationery, library accessions, utilities, and annual maintenance contracts (AMC). Manual paper handling leads to untracked desk delays, missing vouchers, and vendor payment disputes. This module digitizes the entire lifecycle of submitted invoices, enforcing statutory 15-character GSTIN validation, automatic bill numbering, date boundary controls, currency amount transcription, and real-time desk-to-desk progress tracking.
+</p>
+
+<h3>2. Database Schema (Prefix: <code>bill_</code>)</h3>
+<table>
+    <thead>
+        <tr><th>Table Name</th><th>Key Attributes</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>bill_records</code></td>
+            <td><code>id</code>, <code>bill_no</code>, <code>vendor_name</code>, <code>vendor_gstin</code>, <code>vendor_invoice_no</code>, <code>department_name</code>, <code>amount</code>, <code>bill_date</code>, <code>status</code>, <code>current_desk</code>, <code>submitted_by</code></td>
+            <td>Master table storing invoice metadata, statutory GSTIN, amount, and current physical review location.</td>
+        </tr>
+        <tr>
+            <td><code>bill_movements</code></td>
+            <td><code>id</code>, <code>bill_id</code>, <code>from_desk</code>, <code>to_desk</code>, <code>action</code>, <code>remarks</code>, <code>action_by</code>, <code>created_at</code></td>
+            <td>Immutable audit log capturing chronological desk transfers, sanction notes, and payment references.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>3. Life-Cycle Workflow State Machine</h3>
+<div class="workflow">
+    [ Submit Bill ] &rarr; ( RECEIVED ) &rarr; [ Verify ] &rarr; ( VERIFIED ) &rarr; [ Process ] &rarr; ( PROCESSING ) &rarr; [ Pay ] &rarr; ( PAID )<br>
+    <em>Alternative:</em> [ Return with Remarks ] &rarr; ( RETURNED ) &rarr; [ Resubmit ] &rarr; ( RECEIVED )
+</div>
+
+<h3>4. Syllabus Units Integration Plan</h3>
+<ul>
+    <li><strong>Unit 1 (PHP Basics):</strong> Associative arrays for status badges and department configurations; dynamic HTML table rendering via loops.</li>
+    <li><strong>Unit 2 (String Tasks):</strong> 15-char GSTIN statutory regex validation (<code>validate_gstin</code>); formatted sequential bill number generation (<code>BILL/2026-27/XXXX</code>); verbal currency transcription in Indian numbering system (<code>amount_in_words</code>).</li>
+    <li><strong>Unit 3 (Forms & Validation):</strong> GET multi-criteria search form; POST submission form with server-side numeric and date constraints, sticky form retention, CSRF protection, and PRG redirection.</li>
+    <li><strong>Unit 4 (MySQL & CRUD):</strong> 100% prepared statements (<code>prepare()</code> / <code>bind_param()</code>); SQL JOIN with shared users; 10 realistic seed records.</li>
+    <li><strong>Unit 5 (jQuery & AJAX):</strong> Decoupled backend endpoint <code>api/track_bill.php</code> returning JSON; client-side jQuery script dynamically rendering the visual status timeline without page reload.</li>
+</ul>
+
+<div class="signatures">
+    <div><strong>Student's Signature:</strong> _______________________</div>
+    <div><strong>Date:</strong> 12 October 2026</div>
+    <div><strong>Teacher's Approval:</strong> _______________________</div>
+</div>
+
+</body>
+</html>
