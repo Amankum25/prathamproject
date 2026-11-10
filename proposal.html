@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Proposal · P20 · 24020568036 · Samarth Bill Tracking</title>
+    <title>Proposal · P27 · 24020568036 · Samarth Bill Tracking</title>
     <style>
         @page { size: A4; margin: 15mm; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.45; color: #1f2937; margin: 0; padding: 15px; }
@@ -36,12 +36,12 @@
 
 <div class="title-box">
     <div>
-        <div><strong>Project ID:</strong> P20</div>
-        <div><strong>Module Title:</strong> Samarth: Bill Tracking System</div>
+        <div><strong>Project ID:</strong> P27</div>
+        <div><strong>Module Title:</strong> Bill Tracking System</div>
         <div><strong>Package:</strong> Finance (RC Campus Connect ERP)</div>
     </div>
     <div>
-        <div><strong>Student Name:</strong> Aman</div>
+        <div><strong>Student Name:</strong> Pratham</div>
         <div><strong>University Roll No:</strong> 24020568036</div>
         <div><strong>Assigned Table Prefix:</strong> <code>bill_</code></div>
     </div>
@@ -60,7 +60,7 @@
     <tbody>
         <tr>
             <td><code>bill_records</code></td>
-            <td><code>id</code>, <code>bill_no</code>, <code>vendor_name</code>, <code>vendor_gstin</code>, <code>vendor_invoice_no</code>, <code>department_name</code>, <code>amount</code>, <code>bill_date</code>, <code>status</code>, <code>current_desk</code>, <code>submitted_by</code></td>
+            <td><code>id</code>, <code>bill_no</code>, <code>vendor_name</code>, <code>vendor_gstin</code>, <code>vendor_invoice_no</code>, <code>department_id</code>, <code>amount</code>, <code>bill_date</code>, <code>status</code>, <code>current_desk</code>, <code>submitted_by</code></td>
             <td>Master table storing invoice metadata, statutory GSTIN, amount, and current physical review location.</td>
         </tr>
         <tr>
@@ -83,7 +83,7 @@
     <li><strong>Unit 2 (String Tasks):</strong> 15-char GSTIN statutory regex validation (<code>validate_gstin</code>); formatted sequential bill number generation (<code>BILL/2026-27/XXXX</code>); verbal currency transcription in Indian numbering system (<code>amount_in_words</code>).</li>
     <li><strong>Unit 3 (Forms & Validation):</strong> GET multi-criteria search form; POST submission form with server-side numeric and date constraints, sticky form retention, CSRF protection, and PRG redirection.</li>
     <li><strong>Unit 4 (MySQL & CRUD):</strong> 100% prepared statements (<code>prepare()</code> / <code>bind_param()</code>); SQL JOIN with shared users; 10 realistic seed records.</li>
-    <li><strong>Unit 5 (jQuery & AJAX):</strong> Decoupled backend endpoint <code>api/track_bill.php</code> returning JSON; client-side jQuery script dynamically rendering the visual status timeline without page reload.</li>
+    <li><strong>Unit 5 (jQuery & AJAX):</strong> Decoupled backend endpoint <code>api/search.php</code> returning JSON; client-side jQuery script dynamically rendering the visual status timeline without page reload.</li>
 </ul>
 
 <div class="signatures">

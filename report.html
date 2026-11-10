@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>P20_24020568036_Report · Samarth Bill Tracking</title>
+    <title>P27_24020568036_Report · Bill Tracking System</title>
     <style>
-        @page { size: A4; margin: 20mm; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #1f2937; margin: 0; padding: 24px; font-size: 13.5px; background: #fff; }
-        .header { border-bottom: 3px solid #781d26; padding-bottom: 12px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: flex-end; }
-        .college { font-size: 19px; font-weight: 700; color: #781d26; }
-        .meta-box { background: #fdf2f4; border: 1px solid #fbcfe8; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        h2 { color: #781d26; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 24px; font-size: 16px; }
-        h3 { font-size: 14px; color: #374151; margin-top: 16px; }
-        table { width: 100%; border-collapse: collapse; margin: 12px 0 20px 0; font-size: 12.5px; }
-        th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; }
+        @page { size: A4; margin: 18mm; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.55; color: #1f2937; margin: 0; padding: 20px; font-size: 13px; background: #fff; }
+        .header { border-bottom: 3px solid #781d26; padding-bottom: 10px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .college { font-size: 18px; font-weight: 700; color: #781d26; }
+        .meta-box { background: #fdf2f4; border: 1px solid #fbcfe8; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12.5px; }
+        h2 { color: #781d26; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin-top: 20px; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        h3 { font-size: 13.5px; color: #374151; margin-top: 14px; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0 16px 0; font-size: 12px; }
+        th, td { border: 1px solid #d1d5db; padding: 7px 9px; text-align: left; }
         th { background: #f9fafb; font-weight: 600; color: #374151; }
         code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; background: #f3f4f6; border-radius: 4px; }
-        code { padding: 2px 5px; font-size: 12px; }
-        pre { padding: 12px; overflow-x: auto; font-size: 11.5px; border: 1px solid #e5e7eb; }
-        .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+        code { padding: 2px 4px; font-size: 11.5px; }
+        pre { padding: 10px; overflow-x: auto; font-size: 11px; border: 1px solid #e5e7eb; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
         .badge-pass { background: #d1fae5; color: #065f46; }
-        .diagram { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 16px; text-align: center; font-family: monospace; font-size: 13px; line-height: 1.8; margin: 16px 0; }
-        .print-btn { background: #781d26; color: #fff; border: none; padding: 10px 18px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; position: fixed; top: 20px; right: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
+        .diagram { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; text-align: center; font-family: monospace; font-size: 12px; line-height: 1.7; margin: 12px 0; }
+        .print-btn { background: #781d26; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; position: fixed; top: 15px; right: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.15); }
         @media print { .print-btn { display: none; } body { padding: 0; } }
     </style>
 </head>
@@ -31,33 +31,33 @@
 <div class="header">
     <div>
         <div class="college">RAMANUJAN COLLEGE · UNIVERSITY OF DELHI</div>
-        <div style="font-size: 13px; color: #6b7280; font-weight: 500;">Department of Computer Science · GE-5b Advanced Web Programming</div>
+        <div style="font-size: 12.5px; color: #6b7280; font-weight: 500;">Department of Computer Science · GE-5b Advanced Web Programming</div>
     </div>
-    <div style="text-align: right; font-size: 12px; color: #6b7280;">
-        Semester V (2026-27)<br>Examination Practical Report
+    <div style="text-align: right; font-size: 11.5px; color: #6b7280;">
+        Semester V (2026-27)<br>Practical Examination Report
     </div>
 </div>
 
 <div class="meta-box">
     <div>
-        <div><strong>Project ID:</strong> P20</div>
-        <div><strong>Module Title:</strong> Samarth: Bill Tracking System (Finance Package)</div>
+        <div><strong>Project ID:</strong> P27</div>
+        <div><strong>Module Title:</strong> Bill Tracking System (Finance Package)</div>
         <div><strong>Assigned Table Prefix:</strong> <code>bill_</code></div>
     </div>
     <div>
+        <div><strong>Student Name:</strong> Pratham</div>
         <div><strong>Student Roll Number:</strong> 24020568036</div>
-        <div><strong>Student Name:</strong> Aman</div>
-        <div><strong>Repository Name:</strong> <code>campus-sutra/p20-24020568036</code></div>
+        <div><strong>Repository Name:</strong> <code>campus-sutra/p27-24020568036</code></div>
     </div>
 </div>
 
 <h2>1. Executive Summary & Problem Description</h2>
 <p>
-    The <strong>Samarth: Bill Tracking System</strong> digitizes the administrative handling of incoming vendor invoices and departmental expenditure bills. Modeled on Delhi University's Samarth eGov ERP and DUCC financial guidelines, this module enforces statutory compliance checks—specifically automated 15-character Indian GSTIN verification, invoice date boundary controls, currency amount-in-words verbal transcription, and a desk-to-desk life cycle workflow tracking bills from submission through verification, budget sanction, and bank disbursement.
+    The <strong>Samarth: Bill Tracking System (Module P27)</strong> digitizes the administrative handling of incoming vendor invoices and departmental expenditure vouchers across Ramanujan College. Built as an integral component of the <strong>RC Campus Connect</strong> college ERP, this module enforces statutory compliance checks—specifically automated 15-character Indian GSTIN verification, invoice date boundary controls, currency amount-in-words verbal transcription, and a desk-to-desk life cycle workflow tracking bills from submission through verification, budget sanction, and bank disbursement.
 </p>
 
 <h2>2. Relational Database Architecture (Prefix: <code>bill_</code>)</h2>
-<p>The module isolates its state into two relational tables in the <code>rc_campus</code> database:</p>
+<p>The module isolates its state into two relational tables in the <code>rc_campus</code> database, with foreign keys connected to shared users and departments:</p>
 
 <h3>Table 1: <code>bill_records</code> (Master Invoice Registry)</h3>
 <table>
@@ -65,16 +65,17 @@
         <tr><th>Column</th><th>Data Type</th><th>Constraints</th><th>Functional Description</th></tr>
     </thead>
     <tbody>
-        <tr><td><code>id</code></td><td>INT</td><td>PK, AUTO_INCREMENT</td><td>Unique internal invoice surrogate key.</td></tr>
+        <tr><td><code>id</code></td><td>INT UNSIGNED</td><td>PK, AUTO_INCREMENT</td><td>Unique invoice surrogate key.</td></tr>
         <tr><td><code>bill_no</code></td><td>VARCHAR(50)</td><td>UNIQUE, NOT NULL</td><td>Formatted ERP bill tracking code (e.g. <code>BILL/2026-27/0001</code>).</td></tr>
         <tr><td><code>vendor_name</code></td><td>VARCHAR(150)</td><td>NOT NULL</td><td>Registered legal entity name of the supplier/vendor.</td></tr>
         <tr><td><code>vendor_gstin</code></td><td>VARCHAR(15)</td><td>NOT NULL</td><td>Statutory 15-character GST Identification Number.</td></tr>
         <tr><td><code>vendor_invoice_no</code></td><td>VARCHAR(50)</td><td>NOT NULL</td><td>Original invoice reference number issued by the vendor.</td></tr>
-        <tr><td><code>department_name</code></td><td>VARCHAR(100)</td><td>NOT NULL</td><td>College department incurring the expenditure.</td></tr>
+        <tr><td><code>department_id</code></td><td>INT UNSIGNED</td><td>FK &rarr; departments(id)</td><td>References real college department (CS, Commerce, Admin, etc.).</td></tr>
         <tr><td><code>amount</code></td><td>DECIMAL(12,2)</td><td>NOT NULL</td><td>Gross sanctioned invoice amount in Indian Rupees.</td></tr>
         <tr><td><code>bill_date</code></td><td>DATE</td><td>NOT NULL</td><td>Invoice date (validated to be &le; today).</td></tr>
         <tr><td><code>status</code></td><td>ENUM</td><td>NOT NULL</td><td><code>received</code>, <code>verified</code>, <code>processing</code>, <code>paid</code>, <code>returned</code>.</td></tr>
         <tr><td><code>current_desk</code></td><td>VARCHAR(100)</td><td>NOT NULL</td><td>Physical desk currently reviewing the invoice.</td></tr>
+        <tr><td><code>submitted_by</code></td><td>INT UNSIGNED</td><td>FK &rarr; users(id)</td><td>References real staff member who submitted the bill.</td></tr>
     </tbody>
 </table>
 
@@ -84,14 +85,14 @@
         <tr><th>Column</th><th>Data Type</th><th>Constraints</th><th>Functional Description</th></tr>
     </thead>
     <tbody>
-        <tr><td><code>id</code></td><td>INT</td><td>PK, AUTO_INCREMENT</td><td>Unique movement record ID.</td></tr>
-        <tr><td><code>bill_id</code></td><td>INT</td><td>FK &rarr; bill_records(id)</td><td>Cascading foreign key pointing to the target bill.</td></tr>
+        <tr><td><code>id</code></td><td>INT UNSIGNED</td><td>PK, AUTO_INCREMENT</td><td>Unique movement record ID.</td></tr>
+        <tr><td><code>bill_id</code></td><td>INT UNSIGNED</td><td>FK &rarr; bill_records(id)</td><td>Cascading foreign key pointing to the target bill.</td></tr>
         <tr><td><code>from_desk</code></td><td>VARCHAR(100)</td><td>NOT NULL</td><td>Originating physical/administrative desk.</td></tr>
         <tr><td><code>to_desk</code></td><td>VARCHAR(100)</td><td>NOT NULL</td><td>Destination physical/administrative desk.</td></tr>
         <tr><td><code>action</code></td><td>ENUM</td><td>NOT NULL</td><td><code>submitted</code>, <code>verified</code>, <code>forwarded</code>, <code>processed</code>, <code>paid</code>, <code>returned</code>.</td></tr>
         <tr><td><code>remarks</code></td><td>TEXT</td><td>NULL</td><td>Discrepancy notes, sanction references, or UTR payment IDs.</td></tr>
-        <tr><td><code>action_by</code></td><td>INT</td><td>NOT NULL</td><td>References fictional staff user who authorized the transition.</td></tr>
-        <tr><td><code>created_at</code></td><td>TIMESTAMP</td><td>DEFAULT CURRENT_TIMESTAMP</td><td>Immutable timestamp of movement.</td></tr>
+        <tr><td><code>action_by</code></td><td>INT UNSIGNED</td><td>FK &rarr; users(id)</td><td>References staff member who authorized the transition.</td></tr>
+        <tr><td><code>created_at</code></td><td>DATETIME</td><td>DEFAULT CURRENT_TIMESTAMP</td><td>Immutable timestamp of movement.</td></tr>
     </tbody>
 </table>
 
@@ -116,14 +117,14 @@
     <tbody>
         <tr>
             <td><strong>Unit 1: PHP Basics</strong></td>
-            <td>Constants (<code>BILL_STATUSES</code>), associative arrays, dynamic loops building the ledger table in <code>index.php</code>.</td>
+            <td>Constants (<code>BILL_FLOW</code>, <code>BILL_DESKS</code>), associative arrays, dynamic loops building the ledger table in <code>index.php</code>.</td>
             <td><span class="badge badge-pass">PASSED</span></td>
         </tr>
         <tr>
             <td><strong>Unit 2: String Handling</strong></td>
             <td>
-                1. 15-char GSTIN Regex: <code>/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/</code><br>
-                2. Formatted Bill Code: <code>generate_bill_number()</code><br>
+                1. 15-char GSTIN Regex: <code>/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/</code> in <code>validate_gstin()</code><br>
+                2. Formatted Bill Code: <code>bill_ref()</code><br>
                 3. Amount in Words: Indian numbering algorithm in <code>amount_in_words()</code>.
             </td>
             <td><span class="badge badge-pass">PASSED</span></td>
@@ -135,38 +136,28 @@
         </tr>
         <tr>
             <td><strong>Unit 4: MySQL & CRUD</strong></td>
-            <td>100% prepared statements (<code>prepare()</code> / <code>bind_param()</code>), SQL joins with shared staff, 10 realistic seeded records.</td>
+            <td>100% prepared statements (<code>prepare()</code> / <code>bind_param()</code>), SQL joins with shared staff and departments, 10 realistic seeded records.</td>
             <td><span class="badge badge-pass">PASSED</span></td>
         </tr>
         <tr>
             <td><strong>Unit 5: jQuery & AJAX</strong></td>
-            <td>Live tracker at <code>track.php</code> fetching data from <code>api/track_bill.php</code> returning JSON, rendering timeline dynamically.</td>
+            <td>Live tracker at <code>track.php</code> fetching data from <code>api/search.php</code> returning JSON, rendering timeline dynamically.</td>
             <td><span class="badge badge-pass">PASSED</span></td>
         </tr>
     </tbody>
 </table>
 
-<h2>5. Automated Test Suite Results</h2>
-<p>All 16 automated tests passed with zero failures on local PHP 8 / MariaDB runtime:</p>
+<h2>5. Automated Test Suite & CI Check Results</h2>
+<p>Executed official automated test tool <code>tools/check_module.php</code>:</p>
 <pre>
 ========================================================
-RC CAMPUS CONNECT · AUTOMATED TEST SUITE REPORT
-Passed: 16 | Failed: 0
+php tools/check_module.php (with RC_FINAL=1)
+0 error(s), 0 warning(s)
 ========================================================
-[PASS] GSTIN Valid: Delhi Company (07AAACM3421K1Z2)
-[PASS] GSTIN Valid: Bihar Vendor (10AABFD4412L1ZM)
-[PASS] GSTIN Invalid: Too short (14 chars)
-[PASS] GSTIN Invalid: Invalid 14th character (Must be Z)
-[PASS] Amount in Words: Thousands Check (Eighty Four Thousand Five Hundred Rupees Only)
-[PASS] Amount in Words: Lakhs Check (One Lakh Twenty Five Thousand Rupees Only)
-[PASS] Amount in Words: Decimal/Paise Check
-[PASS] Bill Number Generation: Pad 4 digits (BILL/2026-27/0009)
-[PASS] MySQL Connection: Active & Alive
-[PASS] Database Table: bill_records exists
-[PASS] Database Table: bill_movements exists
-[PASS] Realistic Seed Data: At least 10 records loaded
-[PASS] XSS Sanitization: e() properly escapes HTML
-[PASS] CSRF Token Generation: High-entropy token exists (Length: 64)
+[PASS] module.json: ID P27, title "Bill Tracking System", student Pratham (24020568036)
+[PASS] database.sql: Prefix bill_, no shared tables modified, 10 realistic bills + 23 movements
+[PASS] shared.sha256: All hashes match official starter repository
+[PASS] Syntax check: All PHP files compile cleanly with zero errors
 </pre>
 
 <h2>6. Security Checklist Compliance</h2>
@@ -174,9 +165,8 @@ Passed: 16 | Failed: 0
     <li><strong>SQL Injection:</strong> All queries use MySQLi parameter binding; no raw SQL string concatenation.</li>
     <li><strong>Cross-Site Scripting (XSS):</strong> All dynamic values are sanitized using <code>e()</code> (<code>htmlspecialchars</code> with <code>ENT_QUOTES</code>).</li>
     <li><strong>Cross-Site Request Forgery (CSRF):</strong> Hidden CSRF token on all POST requests verified via <code>csrf_verify()</code>.</li>
-    <li><strong>Access Control:</strong> Granular permissions enforced via <code>require_role()</code>.</li>
+    <li><strong>Access Control:</strong> Granular permissions enforced via <code>has_role()</code> and <code>require_role()</code>.</li>
 </ul>
 
 </body>
 </html>
-
